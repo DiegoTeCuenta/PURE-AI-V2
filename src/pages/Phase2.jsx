@@ -137,6 +137,9 @@ export default function Phase2() {
                   </button>
                 )}
               </div>
+              <div className="polaroid-caption">
+                <p>{getSubjectName(item.id, item.name)}</p>
+              </div>
             </div>
           );
         })}

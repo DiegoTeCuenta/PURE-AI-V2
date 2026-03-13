@@ -8,8 +8,15 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .phase-header {
@@ -50,7 +57,7 @@
 .camera-card:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .camera-card.selected {
@@ -74,7 +81,8 @@
 .camera-img-placeholder img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ensures the entire square polaroid is seen */
+  object-fit: contain;
+  /* ensures the entire square polaroid is seen */
   transition: transform 0.5s ease;
 }
 
@@ -123,10 +131,23 @@
 }
 
 @keyframes scan-card {
-  0% { top: 0; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
 }
 
 /* --- RESPONSIVE DESIGN --- */
@@ -134,18 +155,17 @@
   .phase-title {
     font-size: 1.6rem;
   }
-  
+
   .phase-subtitle {
     font-size: 0.95rem;
   }
-  
+
   .camera-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 1rem;
   }
-  
+
   .camera-info {
     padding: 1rem;
   }
 }
-
