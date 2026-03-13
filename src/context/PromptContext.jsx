@@ -14,8 +14,15 @@ export const PromptProvider = ({ children }) => {
   const [environment, setEnvironment] = useState({});
   const [composition, setComposition] = useState({});
 
-  const nextPhase = () => setCurrentPhase((p) => Math.min(p + 1, 7));
-  const prevPhase = () => setCurrentPhase((p) => Math.max(p - 1, 1));
+  const nextPhase = () => {
+    setCurrentPhase((p) => Math.min(p + 1, 7));
+    window.scrollTo(0, 0);
+  };
+  
+  const prevPhase = () => {
+    setCurrentPhase((p) => Math.max(p - 1, 1));
+    window.scrollTo(0, 0);
+  };
   
   const resetAll = () => {
     setCurrentPhase(0);
