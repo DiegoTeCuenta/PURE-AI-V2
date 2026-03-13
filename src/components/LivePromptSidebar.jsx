@@ -4,7 +4,7 @@ import { t } from '../translations';
 import './LivePromptSidebar.css';
 
 export default function LivePromptSidebar() {
-  const { currentPhase, cameraStyle, subjects, environment, composition, language } = usePrompt();
+  const { currentPhase, cameraStyle, subjects, environment, composition, language, globalAction } = usePrompt();
   const [outputMode, setOutputMode] = useState('text'); // 'text' | 'json'
 
   // Basic logic to construct the prompt string from context state
@@ -21,15 +21,20 @@ export default function LivePromptSidebar() {
         let subjDesc = `[Subject ${s.name}: `;
         const props = [];
         if (s.properties?.customDNA) props.push(`DNA: ${s.properties.customDNA}`);
+        else {
+          if (s.properties?.build) props.push(`build: ${s.properties.build}`);
+          if (s.properties?.ethnicity) props.push(`ethnicity: ${s.properties.ethnicity}`);
+          if (s.properties?.eyes) props.push(`${s.properties.eyes} eyes`);
+          if (s.properties?.hair) props.push(`${s.properties.hair} hair`);
+        }
         if (s.properties?.clothing) props.push(`wearing ${s.properties.clothing}`);
-        if (s.properties?.action) props.push(`action: ${s.properties.action}`);
-        if (s.properties?.expression) props.push(`expression: ${s.properties.expression}`);
         
-        subjDesc += props.join(', ') + ']';
+        subjDesc += props.length > 0 ? props.join(', ') : 'Base character';
+        subjDesc += ']';
         parts.push(subjDesc);
       });
-      if (subjects.length > 1 && subjects[0].properties?.interaction) {
-        parts.push(`Interaction: ${subjects[0].properties.interaction}`);
+      if (globalAction) {
+        parts.push(`Scene Action: ${globalAction}`);
       }
     }
     

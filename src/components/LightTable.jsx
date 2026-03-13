@@ -4,7 +4,7 @@ import { t } from '../translations';
 import './LightTable.css';
 
 export default function LightTable() {
-  const { currentPhase, cameraStyle, subjects, environment, composition, language } = usePrompt();
+  const { currentPhase, cameraStyle, subjects, environment, composition, language, globalAction } = usePrompt();
 
   // Compute the storyboard slides based on current state
   const buildStoryboard = () => {
@@ -42,8 +42,8 @@ export default function LightTable() {
     }
 
     // Action/Clothes Concept Slide
-    const hasAction = subjects.some(s => s.properties?.action || s.properties?.clothing);
-    if (hasAction || (subjects.length > 1 && subjects[0].properties?.interaction)) {
+    const hasAction = subjects.some(s => s.properties?.clothing) || globalAction;
+    if (hasAction) {
       slides.push({
         id: 'action',
         img: '/assets/icons/i2.webp',

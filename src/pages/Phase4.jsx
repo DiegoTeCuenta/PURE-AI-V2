@@ -4,7 +4,7 @@ import { t } from '../translations';
 import './Phase4.css';
 
 export default function Phase4() {
-  const { subjects, setSubjects, nextPhase, prevPhase, language } = usePrompt();
+  const { subjects, setSubjects, globalAction, setGlobalAction, nextPhase, prevPhase, language } = usePrompt();
   const [activeSubjectId, setActiveSubjectId] = useState(null);
 
   useEffect(() => {
@@ -68,37 +68,15 @@ export default function Phase4() {
           />
         </div>
 
-        <div className="action-card">
-          <h4>{t(language, 'phases.phase4.action')}</h4>
+        <div className="action-card full-width interaction-card">
+          <h4>{t(language, 'phases.phase4.globalAction')}</h4>
           <textarea 
             className="action-textarea"
-            placeholder={t(language, 'phases.phase4.actionHolder')}
-            value={activeSubject.properties?.action || ''}
-            onChange={(e) => updateSubjectProperty('action', e.target.value)}
+            placeholder={t(language, 'phases.phase4.globalActionHolder')}
+            value={globalAction}
+            onChange={(e) => setGlobalAction(e.target.value)}
           />
         </div>
-
-        <div className="action-card">
-          <h4>{t(language, 'phases.phase4.expression')}</h4>
-          <textarea 
-            className="action-textarea"
-            placeholder={t(language, 'phases.phase4.expressionHolder')}
-            value={activeSubject.properties?.expression || ''}
-            onChange={(e) => updateSubjectProperty('expression', e.target.value)}
-          />
-        </div>
-
-        {subjects.length > 1 && (
-          <div className="action-card full-width interaction-card">
-            <h4>{t(language, 'phases.phase4.interaction')}</h4>
-            <textarea 
-              className="action-textarea"
-              placeholder={t(language, 'phases.phase4.interactionHolder')}
-              value={activeSubject.properties?.interaction || ''}
-              onChange={(e) => updateSubjectProperty('interaction', e.target.value)}
-            />
-          </div>
-        )}
       </div>
 
       <div className="phase-navigation" style={{ marginTop: '3rem' }}>

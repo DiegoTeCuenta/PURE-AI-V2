@@ -138,15 +138,11 @@ export const translations = {
     },
     phase4: {
       title: { es: 'Acción y Vestuario', en: 'Action & Wardrobe' },
-      subtitle: { es: 'Viste a tus sujetos y dales vida.', en: 'Dress your subjects and bring them to life.' },
-      interaction: { es: 'INTERACCIÓN GLOBAL', en: 'GLOBAL INTERACTION' },
-      interactionHolder: { es: 'Ej: Sujeto 1 está abrazando al Sujeto 2...', en: 'Ex: Subject 1 is hugging Subject 2...' },
+      subtitle: { es: 'Viste a tus sujetos y define la acción general de la escena.', en: 'Dress your subjects and define the global scene action.' },
       clothing: { es: 'ROPA / CLOTHING', en: 'WARDROBE / CLOTHING' },
       clothingHolder: { es: 'Ej: Abrigo cyberpunk de cuero negro...', en: 'Ex: Black leather cyberpunk jacket...' },
-      action: { es: 'ACCIÓN / ACTION', en: 'ACTION' },
-      actionHolder: { es: 'Ej: Bebiendo café mirando a la cámara...', en: 'Ex: Drinking coffee looking at camera...' },
-      expression: { es: 'EXPRESIÓN / EXPRESSION', en: 'EXPRESSION' },
-      expressionHolder: { es: 'Ej: Sonrisa melancólica...', en: 'Ex: Melancholic smile...' }
+      globalAction: { es: 'ACCIÓN GLOBAL DE LA ESCENA', en: 'GLOBAL SCENE ACTION' },
+      globalActionHolder: { es: 'Ej: Los tres están sentados en el sillón de la sala, el niño tiene un vaso en la mano...', en: 'Ex: All three are sitting on the couch in the living room, the boy holds a glass...' }
     },
     phase5: {
       title: { es: 'Set y Ambiente', en: 'Set & Environment' },

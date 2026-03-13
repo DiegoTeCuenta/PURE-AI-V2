@@ -10,6 +10,7 @@ export const PromptProvider = ({ children }) => {
   const [language, setLanguage] = useState(null); // 'en' | 'es'
   const [cameraStyle, setCameraStyle] = useState(null); // Now stores the entire camera object {id, label, prompt, img}
   const [subjects, setSubjects] = useState([]); // { id, name, type, isProtagonist, properties: {} }
+  const [globalAction, setGlobalAction] = useState('');
   const [environment, setEnvironment] = useState({});
   const [composition, setComposition] = useState({});
 
@@ -21,6 +22,7 @@ export const PromptProvider = ({ children }) => {
     setLanguage(null);
     setCameraStyle(null);
     setSubjects([]);
+    setGlobalAction('');
     setEnvironment({});
     setComposition({});
   };
@@ -30,6 +32,7 @@ export const PromptProvider = ({ children }) => {
     language, setLanguage,
     cameraStyle, setCameraStyle,
     subjects, setSubjects,
+    globalAction, setGlobalAction,
     environment, setEnvironment,
     composition, setComposition
   };
