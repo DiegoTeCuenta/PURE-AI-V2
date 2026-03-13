@@ -91,3 +91,20 @@
   animation: scan-card 2.5s infinite ease-in-out;
   z-index: 10;
 }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .comp-cards-grid {
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .comp-card {
+    width: 45%; /* roughly 2 per row */
+  }
+  
+  .comp-card-label {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.3rem;
+  }
+}

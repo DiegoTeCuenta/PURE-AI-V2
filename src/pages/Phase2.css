@@ -190,3 +190,36 @@
   border-color: #f1c40f;
   box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
 }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .category-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 5px;
+  }
+  
+  .tab-btn {
+    white-space: nowrap;
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .subjects-grid {
+    gap: 1.5rem 1rem;
+    padding: 1rem 0;
+  }
+  
+  .subject-card {
+    width: 140px;
+  }
+  
+  .custom-subject-box {
+    width: 100%;
+    max-width: 140px;
+    min-height: 180px;
+    padding: 10px;
+  }
+}
+

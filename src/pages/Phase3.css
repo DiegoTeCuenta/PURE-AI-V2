@@ -168,3 +168,28 @@
   50% { box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.5); }
   100% { box-shadow: inset 0 0 0px var(--neon-blue); }
 }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .dna-editor-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .selector-group.split {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .opt-btn {
+    flex: 1 1 calc(33% - 10px);
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+  
+  .dna-terminal {
+    min-height: 250px;
+  }
+}
+

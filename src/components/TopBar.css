@@ -13,6 +13,7 @@
   letter-spacing: 2px;
   background: linear-gradient(90deg, #fff, var(--neon-blue));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
 }
@@ -67,4 +68,27 @@
 .btn-reset:hover {
   background: rgba(255, 71, 87, 0.1);
   box-shadow: 0 0 10px rgba(255, 71, 87, 0.3);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .topbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 1rem 0;
+  }
+
+  .topbar-left h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .progress-indicator {
+    max-width: 100%;
+  }
+
+  .btn-reset {
+    width: 100%;
+    margin-top: 10px;
+  }
 }

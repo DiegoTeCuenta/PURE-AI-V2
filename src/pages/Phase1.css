@@ -128,3 +128,24 @@
   90% { opacity: 1; }
   100% { top: 100%; opacity: 0; }
 }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .phase-title {
+    font-size: 1.6rem;
+  }
+  
+  .phase-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .camera-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .camera-info {
+    padding: 1rem;
+  }
+}
+

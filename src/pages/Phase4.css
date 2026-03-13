@@ -65,3 +65,11 @@
 .interaction-card:hover {
   border: 1px dashed rgba(0, 210, 255, 0.6);
 }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .action-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
