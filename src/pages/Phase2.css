@@ -1,0 +1,192 @@
+.category-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.tab-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-btn:hover {
+  color: white;
+}
+
+.tab-btn.active {
+  color: var(--neon-blue);
+  font-weight: 600;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.subjects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 3rem;
+  padding: 2rem 0;
+}
+
+.subject-card {
+  width: 220px;
+  background: transparent;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.subject-card.selected {
+  outline: 3px solid var(--neon-blue);
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.4), 0 15px 30px rgba(0,0,0,0.8);
+  transform: translateY(-8px) scale(1.02);
+  z-index: 10;
+}
+
+.polaroid-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: auto;
+  background: transparent;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4); 
+}
+
+.subject-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  border: 1px solid #333;
+}
+
+/* For real images once provided */
+.subject-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.subject-card:hover .subject-img-placeholder img {
+  transform: scale(1.05);
+}
+
+.polaroid-caption {
+  text-align: center;
+  padding: 12px 0;
+  background: transparent;
+  /* Ya no necesita ser absolute si no hay un borde rigido de padding */
+  width: 100%;
+}
+
+.polaroid-caption p {
+  color: #f1c40f;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.custom-subject-box {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  min-height: 250px;
+  border-radius: 8px;
+}
+
+.custom-subject-input {
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--border-color);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 10px;
+}
+
+.custom-subject-input:focus {
+  outline: none;
+  border-color: var(--neon-blue);
+}
+
+.btn-add-custom {
+  background: transparent;
+  color: var(--neon-blue);
+  border: 1px solid var(--neon-blue);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+}
+
+.btn-add-custom:hover {
+  background: rgba(0, 210, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+}
+
+/* Protagonist Star Button */
+.btn-protagonist {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 5;
+}
+
+.btn-protagonist:hover {
+  background: rgba(0,0,0,0.8);
+  transform: scale(1.1);
+}
+
+.btn-protagonist.active {
+  background: #f1c40f;
+  color: #000;
+  border-color: #f1c40f;
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
+}

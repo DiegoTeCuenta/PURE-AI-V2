@@ -1,0 +1,67 @@
+.phase-four-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.action-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
+.action-card:hover {
+  border-color: rgba(0, 210, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.action-card h4 {
+  font-family: 'Outfit', sans-serif;
+  color: var(--neon-blue);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.action-textarea {
+  flex: 1;
+  min-height: 120px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+  transition: all 0.3s;
+}
+
+.action-textarea:focus {
+  outline: none;
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.interaction-card {
+  background: rgba(0, 210, 255, 0.03);
+  border: 1px dashed rgba(0, 210, 255, 0.3);
+}
+
+.interaction-card:hover {
+  border: 1px dashed rgba(0, 210, 255, 0.6);
+}

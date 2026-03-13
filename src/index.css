@@ -1,0 +1,87 @@
+:root {
+  --bg-color-dark: #0a0a0c;
+  --neon-blue: #00d2ff;
+  --text-main: #f0f0f0;
+  --text-muted: #888888;
+  --panel-bg: rgba(20, 20, 25, 0.85);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Outfit', sans-serif;
+  background-color: var(--bg-color-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Background image placeholder handling */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* El fondo que subiste se usará aquí: */
+  background-image: url('/assets/background/back_web.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* Sutil como pediste */
+  z-index: -1;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Base utility classes for neon and polaroid styles that we will use later */
+.neon-glow {
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.5), 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.polaroid-card {
+  /* background: white; Removed to allow specific coloring per phase */
+  padding: 8px 8px 24px 8px;
+  border-radius: 4px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.polaroid-card.selected {
+  outline: 2px solid var(--neon-blue);
+  box-shadow: 0 0 15px var(--neon-blue), 0 15px 25px rgba(0,0,0,0.6);
+  transform: translateY(-5px) rotate(1deg);
+}
+
+/* Efecto escáner para la polaroid seleccionada */
+.polaroid-card.selected::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-blue);
+  animation: scan 2s infinite ease-in-out;
+}
+
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
