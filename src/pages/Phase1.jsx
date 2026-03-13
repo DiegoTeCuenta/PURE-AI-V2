@@ -6,7 +6,7 @@ import './Phase1.css';
 const CAMERA_STYLES = [
   { id: 'smartphone', prompt: 'Shot on iPhone 15 Pro, amateur photography, raw photo', img: '/assets/phase1/001_smartphone.webp' },
   { id: 'selfieMirror', prompt: 'Mirror selfie, holding smartphone, bathroom lighting, instagram aesthetic', img: '/assets/phase1/001_selfie_mirror.webp' },
-  { id: 'selfieFront', prompt: 'Front camera selfie, close up portrait, social media style', img: '/assets/phase1/001_selfie_pov.webp' },
+  { id: 'selfieFront', prompt: 'Front-facing camera perspective, POV selfie, Shot on iPhone 15 Pro Max, .HEIC, IMG_FRONTAL_SELFIE.HEIC, slightly wide-angle lens distorted perspective, no arm visible, casual authentic feel, Instagram export compression quality, close up on face and upper body.', img: '/assets/phase1/001_selfie_pov.webp' },
   { id: 'editorial', prompt: 'Editorial photography, shot on 85mm lens, f/1.8, high-end fashion magazine look', img: '/assets/phase1/001_editorial.webp' },
   { id: 'cinematic', prompt: 'Cinematic film still, anamorphic lens, 35mm film, dramatic lighting, movie scene', img: '/assets/phase1/001_cinema.webp' },
   { id: 'documentary', prompt: 'Documentary photography, photojournalism, high contrast, gritty realism', img: '/assets/phase1/001_documentary.webp' },
