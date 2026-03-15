@@ -10,19 +10,19 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   overflow-y: auto;
-  margin-bottom: 100px; /* Space for fixed photoboard */
+  margin-bottom: 110px; /* Space for fixed photoboard */
 }
 
 .layout-content {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 /* Custom scrollbars */

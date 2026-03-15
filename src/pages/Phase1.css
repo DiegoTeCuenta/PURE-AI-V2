@@ -24,8 +24,8 @@
 
 .camera-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -44,36 +44,43 @@
 }
 
 .camera-info {
-  padding: 1rem 0.5rem 0.2rem 0.5rem;
+  padding: 0.8rem 0.2rem 0.2rem 0.2rem;
 }
 
 .camera-info h4 {
   color: var(--accent-main);
-  margin-bottom: 0.4rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.95rem;
 }
 
 .camera-info p {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 @media (max-width: 600px) {
   .camera-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
   }
   
   .camera-info h4 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .camera-info p {
-    font-size: 0.75rem;
+    display: none; /* Hide descriptions on mobile to save space */
   }
   
   .phase-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+  
+  .phase-subtitle {
+    font-size: 0.9rem;
   }
 }

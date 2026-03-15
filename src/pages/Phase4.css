@@ -15,14 +15,13 @@
 
 .comp-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1rem;
 }
 
 .comp-card {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
 }
 
 .comp-img-container {
@@ -30,6 +29,7 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 4px;
+  background: #000;
 }
 
 .comp-img-container img {
@@ -39,11 +39,13 @@
 }
 
 .comp-label {
+  padding: 0.5rem 0.2rem;
   text-align: center;
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
 
 .comp-card.selected .comp-label {
@@ -52,6 +54,15 @@
 
 @media (max-width: 600px) {
   .comp-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+  }
+  
+  .comp-label {
+    font-size: 0.7rem;
   }
 }
