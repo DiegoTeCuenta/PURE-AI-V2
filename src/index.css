@@ -1,10 +1,12 @@
 :root {
-  --bg-color-dark: #0a0a0c;
-  --neon-blue: #00d2ff;
-  --text-main: #f0f0f0;
-  --text-muted: #888888;
-  --panel-bg: rgba(20, 20, 25, 0.85);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --bg-color-dark: #120e0a;
+  --accent-main: #ffb800; /* Amarillos */
+  --accent-secondary: #ff7b00; /* Naranjas */
+  --text-main: #fcfcfc;
+  --text-muted: #a0a09e;
+  --panel-bg: rgba(20, 15, 10, 0.85); /* Darker, slightly warm */
+  --border-color: rgba(255, 255, 255, 0.08);
+  --error-color: #ff4d4d;
 }
 
 * {
@@ -29,41 +31,51 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* El fondo que subiste se usará aquí: */
   background-image: url('/assets/background/back_web.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.15; /* Sutil como pediste */
+  background-attachment: fixed;
+  opacity: 0.15; 
   z-index: -1;
+  pointer-events: none;
 }
 
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
+  padding-bottom: 120px; /* Space for fixed bottom nav */
 }
 
-/* Base utility classes for neon and polaroid styles that we will use later */
-.neon-glow {
-  box-shadow: 0 0 10px rgba(0, 210, 255, 0.5), 0 0 20px rgba(0, 210, 255, 0.3);
+/* Glassmorphism containers */
+.glass-container {
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
 }
 
 .polaroid-card {
-  /* background: white; Removed to allow specific coloring per phase */
-  padding: 8px 8px 24px 8px;
-  border-radius: 4px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
+  padding: 8px 8px 12px 8px; /* Slightly less padding at the bottom */
+  border-radius: 6px;
+  background: rgba(25, 25, 25, 0.5); /* slight dark background instead of white */
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
 .polaroid-card.selected {
-  outline: 2px solid var(--neon-blue);
-  box-shadow: 0 0 15px var(--neon-blue), 0 15px 25px rgba(0,0,0,0.6);
-  transform: translateY(-5px) rotate(1deg);
+  outline: 2px solid var(--accent-main);
+  box-shadow: 0 0 20px rgba(255, 184, 0, 0.3), 0 10px 20px rgba(0,0,0,0.8);
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(30, 30, 30, 0.8);
 }
 
 /* Efecto escáner para la polaroid seleccionada */
@@ -74,8 +86,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--neon-blue);
-  box-shadow: 0 0 10px var(--neon-blue);
+  background: var(--accent-main);
+  box-shadow: 0 0 10px var(--accent-main);
   animation: scan 2s infinite ease-in-out;
 }
 

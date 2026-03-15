@@ -1,75 +1,57 @@
-.phase-four-container {
+.composition-section {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 }
 
-.action-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.action-card {
-  background: var(--panel-bg);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  transition: all 0.3s;
-}
-
-.action-card:hover {
-  border-color: rgba(0, 210, 255, 0.3);
-  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.1);
-  transform: translateY(-2px);
-}
-
-.action-card h4 {
+.section-title {
   font-family: 'Outfit', sans-serif;
-  color: var(--neon-blue);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  color: var(--accent-main);
+  font-size: 1.5rem;
   text-transform: uppercase;
+  border-left: 4px solid var(--accent-main);
+  padding-left: 1rem;
 }
 
-.action-textarea {
-  flex: 1;
-  min-height: 120px;
-  background: rgba(0,0,0,0.5);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: white;
-  padding: 12px;
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.comp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.comp-img-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   border-radius: 4px;
-  font-family: 'Inter', sans-serif;
-  resize: vertical;
-  transition: all 0.3s;
 }
 
-.action-textarea:focus {
-  outline: none;
-  border-color: var(--neon-blue);
-  box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+.comp-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.full-width {
-  grid-column: 1 / -1;
+.comp-label {
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
-.interaction-card {
-  background: rgba(0, 210, 255, 0.03);
-  border: 1px dashed rgba(0, 210, 255, 0.3);
+.comp-card.selected .comp-label {
+  color: var(--accent-main);
 }
 
-.interaction-card:hover {
-  border: 1px dashed rgba(0, 210, 255, 0.6);
-}
-
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 1024px) {
-  .action-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+@media (max-width: 600px) {
+  .comp-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

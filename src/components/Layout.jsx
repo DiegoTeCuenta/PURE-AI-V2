@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { usePrompt } from '../context/PromptContext';
 import TopBar from './TopBar';
-import LivePromptSidebar from './LivePromptSidebar';
-import LightTable from './LightTable';
+import WizardNavigation from './WizardNavigation';
+import Photoboard from './Photoboard';
 import './Layout.css';
 
 export default function Layout({ children }) {
@@ -14,26 +14,22 @@ export default function Layout({ children }) {
       scrollRef.current.scrollTop = 0;
     }
   }, [currentPhase]);
+
   return (
     <div className="layout-root">
+      <TopBar />
       
-      {/* Main Content Area (Left side) */}
-      <main className="layout-main">
-          <TopBar />
-          
-          <div className="layout-content-scrollable" ref={scrollRef}>
-            {children}
-          </div>
-          
-        </main>
-        
-        {/* Right Sidebar (Always Visible) */}
-        <div className="layout-sidebar">
-          <LivePromptSidebar />
+      <main className="layout-main" ref={scrollRef}>
+        <div className="layout-content">
+          {children}
         </div>
+        
+        {/* Navigation is part of the layout flow but pushes content up */}
+        <WizardNavigation />
+      </main>
 
-      {/* Bottom Light Table (Always Visible) */}
-      <LightTable />
+      {/* Photoboard is absolute bottom */}
+      <Photoboard />
     </div>
   );
 }

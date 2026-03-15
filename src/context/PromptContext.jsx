@@ -5,17 +5,17 @@ const PromptContext = createContext();
 export const usePrompt = () => useContext(PromptContext);
 
 export const PromptProvider = ({ children }) => {
-  // Global state across Phase 0 to 6
+  // Global state across Phase 0 to 5
   const [currentPhase, setCurrentPhase] = useState(0);
   const [language, setLanguage] = useState(null); // 'en' | 'es'
-  const [cameraStyle, setCameraStyle] = useState(null); // Now stores the entire camera object {id, label, prompt, img}
-  const [subjects, setSubjects] = useState([]); // { id, name, type, isProtagonist, properties: {} }
-  const [globalAction, setGlobalAction] = useState('');
-  const [environment, setEnvironment] = useState({});
-  const [composition, setComposition] = useState({});
+  const [cameraStyle, setCameraStyle] = useState(null); // Phase 1: Style
+  const [subjects, setSubjects] = useState([]); // Phase 2: Subjects array (max 4)
+  const [actionLocation, setActionLocation] = useState(''); // Phase 3: Action/Location
+  const [composition, setComposition] = useState(null); // Phase 4: Composition
+  const [photoboardEntries, setPhotoboardEntries] = useState(new Array(8).fill(null)); // Fixed length 8
 
   const nextPhase = () => {
-    setCurrentPhase((p) => Math.min(p + 1, 7));
+    setCurrentPhase((p) => Math.min(p + 1, 5));
     window.scrollTo(0, 0);
   };
   
@@ -29,19 +29,19 @@ export const PromptProvider = ({ children }) => {
     setLanguage(null);
     setCameraStyle(null);
     setSubjects([]);
-    setGlobalAction('');
-    setEnvironment({});
-    setComposition({});
+    setActionLocation('');
+    setComposition(null);
+    setPhotoboardEntries(new Array(8).fill(null));
   };
 
   const value = {
-    currentPhase, nextPhase, prevPhase, resetAll,
+    currentPhase, nextPhase, prevPhase, resetAll, setCurrentPhase,
     language, setLanguage,
     cameraStyle, setCameraStyle,
     subjects, setSubjects,
-    globalAction, setGlobalAction,
-    environment, setEnvironment,
-    composition, setComposition
+    actionLocation, setActionLocation,
+    composition, setComposition,
+    photoboardEntries, setPhotoboardEntries
   };
 
   return (

@@ -44,12 +44,8 @@ export const translations = {
 
   // Phases
   phases: {
-    success: {
-      title: { es: '¡PROMPT GENERADO!', en: 'PROMPT GENERATED!' },
-      subtitle: { es: 'Copia y pega tu prompt desde la barra lateral.', en: 'Copy and paste your prompt from the sidebar.' }
-    },
     phase1: {
-      title: { es: 'Cámara y Estilo', en: 'Camera & Style' },
+      title: { es: 'Estilo de Fotografía', en: 'Photography Style' },
       subtitle: { es: 'Selecciona el estilo base de tu fotografía.', en: 'Select the base style for your photography.' },
       styles: {
         smartphone: {
@@ -57,11 +53,11 @@ export const translations = {
           desc: { es: 'Look amateur, crudo, sin filtros.', en: 'Amateur look, raw, no filters.' }
         },
         selfieMirror: {
-          label: { es: 'Selfie (Espejo)', en: 'Selfie (Mirror)' },
+          label: { es: 'Smartphone (Espejo)', en: 'Smartphone (Mirror)' },
           desc: { es: 'Reflejo en un espejo con el brazo visible.', en: 'Reflection in a mirror with visible arm.' }
         },
         selfieFront: {
-          label: { es: 'Selfie (Cámara Frontal)', en: 'Selfie (Front Camera)' },
+          label: { es: 'Smartphone (Selfie)', en: 'Smartphone (Selfie)' },
           desc: { es: 'Cámara frontal, perspectiva distorsionada leve.', en: 'Front camera, slight distorted perspective.' }
         },
         editorial: {
@@ -80,108 +76,44 @@ export const translations = {
     },
     phase2: {
       title: { es: 'Sujetos', en: 'Subjects' },
-      subtitle: { es: 'Elige quién o qué aparecerá en escena (Máx 4).', en: 'Choose who or what will appear in the scene (Max 4).' },
-      tabs: {
-        human: { es: 'HUMANOS', en: 'HUMANS' },
-        animal: { es: 'ANIMALES', en: 'ANIMALS' },
-        creature: { es: 'CRIATURAS', en: 'CREATURES' },
-        object: { es: 'OBJETOS', en: 'OBJECTS' },
-        other: { es: 'OTROS', en: 'OTHERS' }
+      subtitle: { es: '¿Quién o quienes aparecen en la foto?', en: 'Who or what appear in the photo?' },
+      instructions: {
+        es: 'Describe a detalle cada personaje que sale en la fotografía. Puedes ser animales personajes fantásticos u objetos. Puedes incluir hasta un máximo de 4 personajes. te sugerimos la siguiente estructura: (persona, edad, características físicas, vestimenta). Los ejemplos de abajo pueden ayudarte y darte ideas. Debes presionar el botón \'+\' cuando termines la descripción de cada personaje.',
+        en: 'Describe each character in the photograph in detail. They can be animals, fantastic characters, or objects. You can include up to 4 characters. We suggest the following structure: (person, age, physical characteristics, clothing). The examples below can help you and give you ideas. You must press the \'+\' button when you finish the description of each character.'
       },
-      selectProtagonist: { es: '★ MARCAR COMO PROTAGONISTA', en: '★ MARK AS PROTAGONIST' },
-      isProtagonist: { es: 'PROTAGONISTA PRINCIPAL', en: 'MAIN PROTAGONIST' },
-      limitReached: { es: 'Has alcanzado el límite de 4 sujetos.', en: 'You have reached the limit of 4 subjects.' },
-      subjects: {
-        h1: { es: 'Hombre Joven', en: 'Young Man' },
-        h2: { es: 'Mujer Joven', en: 'Young Woman' },
-        h3: { es: 'Hombre Mayor', en: 'Older Man' },
-        h4: { es: 'Mujer Mayor', en: 'Older Woman' },
-        h5: { es: 'Niño', en: 'Boy' },
-        h6: { es: 'Niña', en: 'Girl' },
-        a1: { es: 'Perro', en: 'Dog' },
-        a2: { es: 'Gato', en: 'Cat' },
-        a3: { es: 'Caballo', en: 'Horse' },
-        c1: { es: 'Alien', en: 'Alien' },
-        c2: { es: 'Robot/Cyborg', en: 'Robot/Cyborg' },
-        c3: { es: 'Elfo/Fantasía', en: 'Elf/Fantasy' },
-        o1: { es: 'Vehículo', en: 'Vehicle' },
-        o2: { es: 'Arma/Prop', en: 'Weapon/Prop' },
-        o3: { es: 'Joya/Artefacto', en: 'Jewel/Artifact' }
-      }
+      placeholder: { es: 'Describe aquí un sujeto...', en: 'Describe a subject here...' }
     },
     phase3: {
-      title: { es: 'Laboratorio ADN', en: 'DNA Laboratory' },
-      subtitle: { es: 'Modifica la estructura física y genética de tus sujetos.', en: 'Modify the physical and genetic structure of your subjects.' },
-      noSubjects: { es: 'Vuelve a la Fase 2 y selecciona al menos un sujeto.', en: 'Go back to Phase 2 and select at least one subject.' },
-      nonHumanPlaceholder: { es: 'Describe los detalles visuales de este elemento...', en: 'Describe the visual details of this element...' },
-      build: { es: 'COMPLEXIÓN / BUILD', en: 'COMPLEXION / BUILD' },
-      ethnicity: { es: 'ETNIA / ETHNICITY', en: 'ETHNICITY' },
-      eyes: { es: 'OJOS / EYES', en: 'EYES' },
-      hair: { es: 'CABELLO / HAIR', en: 'HAIR' },
-      customDNA: { es: 'ADN Personalizado / Custom DNA', en: 'Custom DNA' },
-      customHolder: { es: 'Ej: Pecas rojas, cicatriz en el ojo...', en: 'Ex: Red freckles, scar on eye...' },
-      builds: {
-        slim: { es: 'Delgado', en: 'Slim' },
-        athletic: { es: 'Atlético', en: 'Athletic' },
-        muscular: { es: 'Musculoso', en: 'Muscular' },
-        curvy: { es: 'Curvy', en: 'Curvy' },
-        plusSize: { es: 'Plus Size', en: 'Plus Size' }
+      title: { es: 'Acción/Lugar/Momento', en: 'Action/Place/Moment' },
+      subtitle: { es: '¿Qué están haciendo los que aparecen en la foto, dónde y cuándo?', en: 'What are the people in the photo doing, where and when?' },
+      instructions: {
+        es: 'Describe la acción, cuéntame como interactúan los personajes que salen en la fotografía, y dónde ocurre la acción y en qué momento del día. te sugerimos la siguiente estructura: (acción, lugar, momento del día). Los ejemplos de abajo pueden ayudarte y darte ideas. Debes presionar el botón \'+\' cuando termines la descripción.',
+        en: 'Describe the action, tell me how the characters in the photograph interact, and where the action takes place and at what time of day. We suggest the following structure: (action, place, time of day). The examples below can help you and give you ideas. You must press the \'+\' button when you finish the description.'
       },
-      ethnicities: {
-        caucasian: { es: 'Caucásico', en: 'Caucasian' },
-        afro: { es: 'Afro', en: 'Afro' },
-        asian: { es: 'Asiático', en: 'Asian' },
-        latino: { es: 'Latino', en: 'Latino' },
-        pale: { es: 'Pálido', en: 'Pale' },
-        tanned: { es: 'Bronceado', en: 'Tanned' }
-      }
+      placeholder: { es: 'Describe aquí la acción...', en: 'Describe the action here...' }
     },
     phase4: {
-      title: { es: 'Acción y Vestuario', en: 'Action & Wardrobe' },
-      subtitle: { es: 'Viste a tus sujetos y define la acción general de la escena.', en: 'Dress your subjects and define the global scene action.' },
-      clothing: { es: 'ROPA / CLOTHING', en: 'WARDROBE / CLOTHING' },
-      clothingHolder: { es: 'Ej: Abrigo cyberpunk de cuero negro...', en: 'Ex: Black leather cyberpunk jacket...' },
-      globalAction: { es: 'ACCIÓN GLOBAL DE LA ESCENA', en: 'GLOBAL SCENE ACTION' },
-      globalActionHolder: { es: 'Ej: Los tres están sentados en el sillón de la sala, el niño tiene un vaso en la mano...', en: 'Ex: All three are sitting on the couch in the living room, the boy holds a glass...' }
-    },
-    phase5: {
-      title: { es: 'Set y Ambiente', en: 'Set & Environment' },
-      subtitle: { es: 'Construye el mundo a su alrededor: Locación, Luz y Clima.', en: 'Build the world around them: Location, Light & Weather.' },
-      locTitle: { es: '1. Locación Base', en: '1. Base Location' },
-      locHolder: { es: 'O escribe tu propia locación detallada...', en: 'Or write your own detailed location...' },
-      lightTitle: { es: '2. Iluminación', en: '2. Lighting' },
-      lightHolder: { es: 'Ej: Intensidad alta, luz cenital dura...', en: 'Ex: High intensity, hard overhead light...' },
-      extraTitle: { es: '3. Extras y Clima (Opcional)', en: '3. Extras & Weather (Optional)' },
-      locations: {
-        l1: { es: 'Estudio Fotográfico', en: 'Photography Studio' },
-        l2: { es: 'Calle Neón / Cyberpunk', en: 'Neon Street / Cyberpunk' },
-        l3: { es: 'Bosque Profundo', en: 'Deep Forest' },
-        l4: { es: 'Mansión Lujosa', en: 'Luxurious Mansion' },
-        l5: { es: 'Nave Espacial', en: 'Spaceship' },
-        l6: { es: 'Fondo Neutro', en: 'Neutral Background' }
+      title: { es: 'Composición fotográfica', en: 'Photographic Composition' },
+      subtitle: { es: 'Selecciona el encuadre y ángulo para tu toma final.', en: 'Select the framing and angle for your final shot.' },
+      framing: {
+        full: { label: { es: 'Full shot', en: 'Full shot' } },
+        medium: { label: { es: 'Medium shot', en: 'Medium shot' } },
+        close: { label: { es: 'Close-up', en: 'Close-up' } },
+        wide: { label: { es: 'Ultra wide', en: 'Ultra wide' } }
       },
-      lighting: {
-        day: { es: 'Día Natural', en: 'Natural Day' },
-        sunset: { es: 'Atardecer (Sunset)', en: 'Sunset' },
-        blueHour: { es: 'Blue Hour', en: 'Blue Hour' },
-        night: { es: 'Noche', en: 'Night' },
-        artificial: { es: 'Luz Artificial', en: 'Artificial Light' }
-      },
-      extras: {
-        fog: { es: 'Niebla Volumétrica', en: 'Volumetric Fog' },
-        rain: { es: 'Lluvia Fuerte', en: 'Heavy Rain' },
-        dust: { es: 'Polvo/Partículas Flotando', en: 'Floating Dust/Particles' },
-        lens: { es: 'Destellos de Lente (Lens Flare)', en: 'Lens Flares' },
-        smoke: { es: 'Humo Sutil', en: 'Subtle Smoke' }
+      angle: {
+        eye: { label: { es: 'Eye Level', en: 'Eye Level' } },
+        low: { label: { es: 'Low angle', en: 'Low angle' } },
+        high: { label: { es: 'High angle', en: 'High angle' } },
+        dutch: { label: { es: 'Dutch angle', en: 'Dutch angle' } }
       }
     },
-    phase6: {
-      title: { es: 'Composición y Fotografía', en: 'Composition & Photography' },
-      subtitle: { es: 'Selecciona el encuadre y ángulo para tu toma final.', en: 'Select the framing and angle for your final shot.' },
-      framing: { es: 'Encuadre', en: 'Framing' },
-      angle: { es: 'Ángulo', en: 'Angle' },
-      advanced: { es: 'Fotografía Avanzada (Opcional)', en: 'Advanced Photography (Optional)' },
-      advHolder: { es: 'Ej: Lente 85mm, f/1.8, grain película 35mm ISO 400...', en: 'Ex: 85mm lens, f/1.8, 35mm film grain ISO 400...' }
+    phase5: {
+      title: { es: 'Output', en: 'Output' },
+      subtitle: { es: 'Prompt Generado', en: 'Generated Prompt' },
+      copy: { es: 'COPIAR PROMPT', en: 'COPY PROMPT' },
+      reset: { es: 'RESET / EMPEZAR DE NUEVO', en: 'RESET / START OVER' },
+      placeholder: { es: 'Generación de imagen próximamente...', en: 'Image generation coming soon...' }
     }
   }
 };

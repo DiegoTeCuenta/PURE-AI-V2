@@ -1,127 +1,50 @@
 .layout-root {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  /* Espacio inferior para la LightTable */
-  padding-bottom: 120px; 
 }
 
 .layout-main {
-  grid-column: 1 / 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 3rem;
-  overflow: hidden; /* Only inner content scrolls */
-}
-
-.layout-content-scrollable {
-  flex: 1;
+  padding: 1rem;
   overflow-y: auto;
-  padding-bottom: 2rem;
+  margin-bottom: 100px; /* Space for fixed photoboard */
 }
 
-/* Styling for generic scrollbars in the app */
+.layout-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Custom scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 210, 255, 0.3);
+  background: var(--accent-main);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 210, 255, 0.6);
+  background: var(--accent-secondary);
 }
 
-.layout-sidebar {
-  grid-column: 2 / 3;
-  /* Make sure sidebar stretches full height available (ignoring LightTable overlap) */
-  bottom: 120px;
-}
-
-/* Global Nav Button Container Styles (used in phases) */
-.phase-navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border-color);
-}
-
-.btn-nav {
-  padding: 12px 30px;
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.btn-nav.prev {
-  background: transparent;
-  color: var(--text-muted);
-  border: 1px solid var(--border-color);
-}
-
-.btn-nav.prev:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
-}
-
-.btn-nav.next {
-  background: var(--neon-blue);
-  color: #000;
-  box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
-}
-
-.btn-nav.next:hover {
-  box-shadow: 0 0 25px rgba(0, 210, 255, 0.8);
-  transform: translateY(-2px);
-}
-
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 1024px) {
-  .layout-root {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-bottom: 130px; /* Space for mobile light table */
-  }
-
+@media (max-width: 768px) {
   .layout-main {
-    padding: 1rem;
-    overflow: visible;
-  }
-
-  .layout-content-scrollable {
-    overflow: visible;
-  }
-
-  .phase-navigation {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .btn-nav {
-    width: 100%;
-    padding: 16px;
+    padding: 0.5rem;
   }
 }

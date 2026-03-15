@@ -1,0 +1,64 @@
+.photoboard-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(18, 14, 10, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.photoboard-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.photoboard-strip {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-main) transparent;
+}
+
+.photoboard-strip::-webkit-scrollbar {
+  height: 4px;
+}
+
+.photoboard-strip::-webkit-scrollbar-thumb {
+  background: var(--accent-main);
+  border-radius: 2px;
+}
+
+.photoboard-item {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.photoboard-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoboard-placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}

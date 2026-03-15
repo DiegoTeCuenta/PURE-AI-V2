@@ -11,7 +11,7 @@
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
-  background: linear-gradient(90deg, #fff, var(--neon-blue));
+  background: linear-gradient(90deg, #fff, var(--accent-main));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -49,7 +49,7 @@
 
 .progress-bar-fill {
   height: 100%;
-  background: var(--neon-blue);
+  background: var(--accent-main);
   transition: width 0.4s ease;
 }
 
