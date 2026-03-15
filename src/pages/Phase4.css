@@ -38,17 +38,21 @@
   object-fit: cover;
 }
 
-.comp-label {
-  padding: 0.5rem 0.2rem;
+.comp-info {
+  padding: 0.8rem 0.2rem 0.2rem 0.2rem;
   text-align: center;
+}
+
+.comp-info h4 {
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
   color: var(--text-muted);
   font-size: 0.8rem;
   text-transform: uppercase;
+  margin: 0;
 }
 
-.comp-card.selected .comp-label {
+.comp-card.selected .comp-info h4 {
   color: var(--accent-main);
 }
 
@@ -59,10 +63,15 @@
   }
   
   .section-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
   
-  .comp-label {
+  .comp-info h4 {
     font-size: 0.7rem;
+  }
+
+  .composition-section {
+    gap: 1rem;
   }
 }

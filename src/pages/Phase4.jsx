@@ -55,8 +55,8 @@ export default function Phase4() {
               <div className="comp-img-container">
                 <img src={opt.img} alt={opt.id} />
               </div>
-              <div className="comp-label">
-                {t(language, `phases.phase4.framing.${opt.id}.label`)}
+              <div className="comp-info">
+                <h4>{t(language, `phases.phase4.framing.${opt.id}.label`)}</h4>
               </div>
             </div>
           ))}
@@ -75,8 +75,8 @@ export default function Phase4() {
               <div className="comp-img-container">
                 <img src={opt.img} alt={opt.id} />
               </div>
-              <div className="comp-label">
-                {t(language, `phases.phase4.angle.${opt.id}.label`)}
+              <div className="comp-info">
+                <h4>{t(language, `phases.phase4.angle.${opt.id}.label`)}</h4>
               </div>
             </div>
           ))}

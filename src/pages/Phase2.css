@@ -1,9 +1,16 @@
 .instructions-container {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: var(--text-muted);
   max-width: 800px;
   margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .instructions-container {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
 }
 
 .input-section {

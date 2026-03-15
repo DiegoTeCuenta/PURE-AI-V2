@@ -55,7 +55,16 @@ body::before {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  .glass-container {
+    padding: 1rem;
+  }
 }
 
 .polaroid-card {
