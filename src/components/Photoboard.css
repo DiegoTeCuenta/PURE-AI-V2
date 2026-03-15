@@ -49,20 +49,21 @@
   flex-shrink: 0;
 }
 
-.photoboard-subgrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+.photoboard-item img {
   width: 100%;
   height: 100%;
-  background: #000;
+  object-fit: cover;
+  display: block;
 }
 
 .mini-icon {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Still cover to fill the 2x2 grid nicely */
   border: 0.5px solid rgba(255, 255, 255, 0.1);
+  display: block;
+  /* Add subtle background in case it fails */
+  background: #000;
 }
 
 .photoboard-placeholder {

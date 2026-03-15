@@ -7,14 +7,12 @@ const FRAMING_OPTIONS = [
   { id: 'full', img: '/assets/composition/frame_full.webp' },
   { id: 'medium', img: '/assets/composition/frame_medium.webp' },
   { id: 'close', img: '/assets/composition/frame_closeup.webp' },
-  { id: 'wide', img: '/assets/composition/frame_wide.webp' },
 ];
 
 const ANGLE_OPTIONS = [
   { id: 'eye', img: '/assets/composition/angle_eye.webp' },
   { id: 'low', img: '/assets/composition/angle_low.webp' },
   { id: 'high', img: '/assets/composition/angle_high.webp' },
-  { id: 'dutch', img: '/assets/composition/angle_dutch.webp' },
 ];
 
 export default function Phase4() {
@@ -47,48 +45,42 @@ export default function Phase4() {
   return (
     <div className="phase-container animation-fade-in">
       <div className="phase-header">
-        <h1 className="phase-title">{t(language, 'phases.phase4.title')}</h1>
-        <p className="phase-subtitle">{t(language, 'phases.phase4.subtitle')}</p>
+        <h1 className="phase-title">Composición</h1>
+        <p className="phase-subtitle">Encuadre | Ángulo</p>
       </div>
 
-      <div className="composition-section">
-        <h3 className="section-title">{t(language, 'lightTable.types.framing')}</h3>
-        <div className="comp-grid">
-          {FRAMING_OPTIONS.map((opt) => (
-            <div 
-              key={opt.id} 
-              className={`comp-card polaroid-card ${composition?.framing === opt.id ? 'selected' : ''}`}
-              onClick={() => handleSelect('framing', opt)}
-            >
-              <div className="comp-img-container">
-                <img src={opt.img} alt={opt.id} />
-              </div>
-              <div className="comp-info">
-                <h4>{t(language, `phases.phase4.framing.${opt.id}.label`)}</h4>
-              </div>
+      <div className="camera-grid">
+        {/* Framing Options */}
+        {FRAMING_OPTIONS.map((opt) => (
+          <div 
+            key={opt.id} 
+            className={`camera-card polaroid-card ${composition?.framing === opt.id ? 'selected' : ''}`}
+            onClick={() => handleSelect('framing', opt)}
+          >
+            <div className="camera-img-container">
+              <img src={opt.img} alt={opt.id} />
             </div>
-          ))}
-        </div>
-      </div>
+            <div className="camera-info">
+              <h4>{t(language, `phases.phase4.framing.${opt.id}.label`)}</h4>
+            </div>
+          </div>
+        ))}
 
-      <div className="composition-section">
-        <h3 className="section-title">{t(language, 'lightTable.types.angle')}</h3>
-        <div className="comp-grid">
-          {ANGLE_OPTIONS.map((opt) => (
-            <div 
-              key={opt.id} 
-              className={`comp-card polaroid-card ${composition?.angle === opt.id ? 'selected' : ''}`}
-              onClick={() => handleSelect('angle', opt)}
-            >
-              <div className="comp-img-container">
-                <img src={opt.img} alt={opt.id} />
-              </div>
-              <div className="comp-info">
-                <h4>{t(language, `phases.phase4.angle.${opt.id}.label`)}</h4>
-              </div>
+        {/* Angle Options */}
+        {ANGLE_OPTIONS.map((opt) => (
+          <div 
+            key={opt.id} 
+            className={`camera-card polaroid-card ${composition?.angle === opt.id ? 'selected' : ''}`}
+            onClick={() => handleSelect('angle', opt)}
+          >
+            <div className="camera-img-container">
+              <img src={opt.img} alt={opt.id} />
             </div>
-          ))}
-        </div>
+            <div className="camera-info">
+              <h4>{t(language, `phases.phase4.angle.${opt.id}.label`)}</h4>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
