@@ -4,10 +4,28 @@ import { usePrompt } from '../context/PromptContext';
 import './WizardNavigation.css';
 
 const WizardNavigation = () => {
-  const { currentPhase, nextPhase, prevPhase } = usePrompt();
+  const { 
+    currentPhase, 
+    nextPhase, 
+    prevPhase,
+    cameraStyle,
+    subjects,
+    actionLocation,
+    composition
+  } = usePrompt();
 
   const progress = (currentPhase / 5) * 100;
   const dots = [1, 2, 3, 4, 5];
+
+  const isNextDisabled = () => {
+    switch(currentPhase) {
+      case 1: return !cameraStyle;
+      case 2: return subjects.length === 0;
+      case 3: return !actionLocation || actionLocation.trim() === "";
+      case 4: return !composition?.framing || !composition?.angle;
+      default: return false;
+    }
+  };
 
   return (
     <div className="wizard-nav-container">
@@ -20,7 +38,7 @@ const WizardNavigation = () => {
           <Play size={32} style={{ transform: 'rotate(180deg)' }} fill="currentColor" />
           <span className="nav-label">ANTERIOR</span>
         </button>
-
+ 
         <div className="phase-dots">
           {dots.map((dot) => (
             <div 
@@ -29,11 +47,11 @@ const WizardNavigation = () => {
             />
           ))}
         </div>
-
+ 
         <button 
           className="nav-arrow next" 
           onClick={nextPhase}
-          disabled={currentPhase >= 5}
+          disabled={currentPhase >= 5 || isNextDisabled()}
         >
           <span className="nav-label">SIGUIENTE</span>
           <Play size={32} fill="currentColor" />

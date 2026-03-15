@@ -24,14 +24,22 @@ export default function Phase4() {
     const newComp = { ...composition, [type]: item.id };
     setComposition(newComp);
 
-    // Update photoboard
+    // Update photoboard: Group Framing and Angle into index 6
     setPhotoboardEntries((prev) => {
       const newEntries = [...prev];
-      const index = type === 'framing' ? 6 : 7;
-      newEntries[index] = { 
-        img: item.img, 
-        label: t(language, `phases.phase4.${type}.${item.id}.label`) 
+      
+      // Get images for both
+      const framingImg = type === 'framing' ? item.img : FRAMING_OPTIONS.find(f => f.id === composition?.framing)?.img;
+      const angleImg = type === 'angle' ? item.img : ANGLE_OPTIONS.find(a => a.id === composition?.angle)?.img;
+      
+      const icons = [framingImg, angleImg].filter(Boolean);
+      
+      newEntries[6] = { 
+        type: 'group',
+        icons: icons,
+        label: 'Composición' 
       };
+      newEntries[7] = null; // Clean up old angle slot
       return newEntries;
     });
   };

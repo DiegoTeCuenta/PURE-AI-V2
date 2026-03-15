@@ -34,15 +34,16 @@ export default function Phase2() {
     setInputText('');
     setIsTranslating(false);
 
-    // Update photoboard
+    // Update photoboard: Group all subjects into index 1
     setPhotoboardEntries((prev) => {
       const newEntries = [...prev];
-      const index = newSubjects.length; // 1 to 4
-      newEntries[index] = { 
-        img: `/assets/icons/i0${newSubjects.length}.webp`, 
-        label: `Sujeto ${newSubjects.length}` 
+      const subjectIcons = newSubjects.map((s, i) => `/assets/icons/i0${i + 1}.webp`);
+      
+      newEntries[1] = { 
+        type: 'group',
+        icons: subjectIcons,
+        label: `${newSubjects.length} Sujetos`
       };
-      // Fallback to h-number if adn doesn't exist (handled by photoboard img onError or just dev knowledge)
       return newEntries;
     });
   };
