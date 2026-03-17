@@ -76,7 +76,11 @@ export default function Phase3() {
       )}
 
       <div className="carousel-section">
-        <ExampleCarousel examples={PHASE3_EXAMPLES} language={language} />
+        <ExampleCarousel 
+          examples={PHASE3_EXAMPLES} 
+          language={language} 
+          onCopy={(text) => setInputText(text)}
+        />
       </div>
     </div>
   );

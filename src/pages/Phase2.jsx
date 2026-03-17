@@ -8,7 +8,7 @@ import './Phase2.css';
 
 const PHASE2_EXAMPLES = [
   { img: '/assets/subjects/c1.webp', desc: { es: 'Un alienígena, delgado, de piel azulada, con grandes ojos negros y manos largas.', en: 'An alien, slim, with bluish skin, large black eyes, and long hands.' } },
-  { img: '/assets/subjects/a2.webp', desc: { es: 'Un gato peludo, gordo, naranja con rayas blancas, descansando en un sofá.', en: 'A furry, fat, orange cat with white stripes, resting on a sofa.' } },
+  { img: '/assets/subjects/a2.webp', desc: { es: 'Un gato peludo, gordo, naranja con rayas blancas.', en: 'A furry, fat, orange cat with white stripes.' } },
   { img: '/assets/subjects/o3.webp', desc: { es: 'Una taza de café humeante, porcelana blanca fina, sobre una mesa de madera.', en: 'A steaming cup of coffee, fine white porcelain, on a wooden table.' } },
   { img: '/assets/subjects/h2.webp', desc: { es: 'Una mujer joven, estilo cyberpunk, con gafas neón y chaqueta de cuero metálica.', en: 'A young woman, cyberpunk style, with neon glasses and a metallic leather jacket.' } },
   { img: '/assets/subjects/a1.webp', desc: { es: 'Mujer, 22, Afrocaribeña, pelo largo, vestido corto de verano, sandalias blancas, lleva una canasta con flores y habla por teléfono', en: 'Woman, 22, Afro-Caribbean, long hair, short summer dress, white sandals, carrying a basket with flowers and talking on the phone' } },
@@ -81,7 +81,11 @@ export default function Phase2() {
       </div>
 
       <div className="carousel-section">
-        <ExampleCarousel examples={PHASE2_EXAMPLES} language={language} />
+        <ExampleCarousel 
+          examples={PHASE2_EXAMPLES} 
+          language={language} 
+          onCopy={(text) => setInputText(text)}
+        />
       </div>
     </div>
   );
