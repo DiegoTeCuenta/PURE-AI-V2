@@ -1,2 +1,50 @@
-# PURE-AI-V2
-photo-realistic prompt generator for image generators
+PURE-AI-V2 🚀
+
+Generador de prompts para imágenes foto realistas / photo-realistic prompt generator for image generators
+
+🇪🇸 Español
+Pure AI Reality es una herramienta diseñada para eliminar la frustración de escribir prompts complejos. Esta web app guía al usuario a través de un flujo de trabajo estructurado para generar descripciones altamente realistas y detalladas, optimizadas para motores de IA.
+
+✨ Características Principales
+Flujo de Trabajo Paso a Paso: Divide la creación del prompt en etapas lógicas: Sujetos, Acción/Lugar/Momento, y más.
+
+Botón de Copia Directa (Nuevo): Copia ejemplos pre-cargados directamente al cuadro de texto para acelerar tu proceso creativo.
+
+
+Photoboard Dinámico: Visualiza ejemplos de referencia mientras construyes tu propia escena.
+
+Enfoque en Realismo: Optimizada específicamente para obtener resultados fotográficos de alta calidad.
+
+🛠️ Tecnologías
+Deploy: Netlify
+
+Repositorio: GitHub
+
+Comunidad: Diego Te Cuenta (YouTube, TikTok, Discord)
+
+
+
+🇺🇸 English
+Pure AI Reality is a tool designed to eliminate the frustration of writing complex prompts. This web app guides users through a structured workflow to generate highly realistic and detailed descriptions, optimized for AI image engines.
+
+✨ Key Features
+Step-by-Step Workflow: Breaks down prompt creation into logical stages: Subjects, Action/Location/Timing, and more.
+
+Direct Copy Button (New): Copy pre-loaded examples directly into the text box to speed up your creative process.
+
+
+Dynamic Photoboard: View reference examples while building your own scene.
+
+Focus on Realism: Specifically optimized for high-quality photographic results.
+
+🛠️ Stack
+Deployment: Netlify
+
+Source Code: GitHub
+
+Community: Diego Te Cuenta (YouTube, TikTok, Discord)
+
+👤 Author
+Diego Te Cuenta
+Productor visual y experto en flujos de trabajo con IA.
+GitHub Profile
