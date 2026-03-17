@@ -53,11 +53,7 @@ GitHub Profile <br />
 
 ### 🖼️ Resultados Reales / Real Results
 
-| :--- | :--- |
-| **Sujeto/Subject:** Un gato peludo, gordo, naranja con rayas blancas. / A furry, fat, orange cat with white stripes. <br/> **Acción/Action:** camina bajo la lluvia en la ciudad de Londres llevando un paraguas rojo. / walks under the rain in London city carrying a red umbrella. <br />
-![gato](https://github.com/user-attachments/assets/1f7eaed9-5ed8-4633-ba87-a0214b792bd0)<br />
-
-| **Sujeto/Subject:** Un alienígena, delgado, de piel azulada, con grandes ojos negros y manos largas./An alien, slim, with bluish skin, large black eyes, and long hands. <br/> **Acción/Action:** is eating in the kitchen of their modern apartment in New York. / walks under the rain in London city carrying a red umbrella./esta comiendo en la cocina de su apartamento moderno en Nueva York.  <br />
-![alien](https://github.com/user-attachments/assets/184493ce-01d3-4209-bc3a-1cbab91b8f38)<br />
+| <span style="color:#FFEA00">**Sujeto/Subject:**</span> Un gato peludo, gordo, naranja con rayas blancas. / A furry, fat, orange cat with white stripes. <br> <span style="color:#FFEA00">**Acción/Action:**</span> camina bajo la lluvia en la ciudad de Londres llevando un paraguas rojo. / walks under the rain in London city carrying a red umbrella. <br> ![gato](https://github.com/user-attachments/assets/1f7eaed9-5ed8-4633-ba87-a0214b792bd0) |
+| <span style="color:#FFEA00">**Sujeto/Subject:**</span> Un alienígena, delgado, de piel azulada, con grandes ojos negros y manos largas. / An alien, slim, with bluish skin, large black eyes, and long hands. <br> <span style="color:#FFEA00">**Acción/Action:**</span> está comiendo en la cocina de su apartamento moderno en Nueva York. / is eating in the kitchen of their modern apartment in New York. <br> ![alien](https://github.com/user-attachments/assets/184493ce-01d3-4209-bc3a-1cbab91b8f38) |
 
 
