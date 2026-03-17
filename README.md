@@ -2,6 +2,10 @@ PURE-AI-V2 🚀
 
 Generador de prompts para imágenes foto realistas / photo-realistic prompt generator for image generators
 
+![GIF_SPok](https://github.com/user-attachments/assets/db16997e-2ac9-4bea-9fdb-4e9d699afa0f)
+![GIF_ENok](https://github.com/user-attachments/assets/76eeb50d-e5e2-403f-b25a-814f16bcf244)
+
+
 🇪🇸 Español
 Pure AI Reality es una herramienta diseñada para eliminar la frustración de escribir prompts complejos. Esta web app guía al usuario a través de un flujo de trabajo estructurado para generar descripciones altamente realistas y detalladas, optimizadas para motores de IA.
 
