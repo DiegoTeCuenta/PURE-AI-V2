@@ -78,8 +78,8 @@ export const translations = {
       title: { es: 'Sujetos', en: 'Subjects' },
       subtitle: { es: '¿Quién o quienes aparecen en la foto?', en: 'Who or what appear in the photo?' },
       instructions: {
-        es: 'Describe a detalle cada personaje que sale en la fotografía. Puedes ser animales personajes fantásticos u objetos. Puedes incluir hasta un máximo de 4 personajes. te sugerimos la siguiente estructura: (persona, edad, características físicas, vestimenta). Los ejemplos de abajo pueden ayudarte y darte ideas. Debes presionar el botón \'+\' cuando termines la descripción de cada personaje.',
-        en: 'Describe each character in the photograph in detail. They can be animals, fantastic characters, or objects. You can include up to 4 characters. We suggest the following structure: (person, age, physical characteristics, clothing). The examples below can help you and give you ideas. You must press the \'+\' button when you finish the description of each character.'
+        es: '- Describe a cada participante de la foto.(Máximo 4).\n- Los ejemplos son ideas, si te gustan, hay un botón de copiar en cada imagen.\n- Debes presionar el botón \'+\' cuando termines la descripción de cada personaje.\n- El botón siguiente se activa, elijas 1 o 4 participantes.',
+        en: '- Describe each participant in the photo (Maximum 4).\n- The examples are ideas; if you like them, there is a copy button on each image.\n- You must press the \'+\' button when you finish the description of each character.\n- The next button activates whether you choose 1 or 4 participants.'
       },
       placeholder: { es: 'Describe aquí un sujeto...', en: 'Describe a subject here...' }
     },
@@ -87,8 +87,8 @@ export const translations = {
       title: { es: 'Acción/Lugar/Momento', en: 'Action/Place/Moment' },
       subtitle: { es: '¿Qué están haciendo los que aparecen en la foto, dónde y cuándo?', en: 'What are the people in the photo doing, where and when?' },
       instructions: {
-        es: 'Describe la acción, cuéntame como interactúan los personajes que salen en la fotografía, y dónde ocurre la acción y en qué momento del día. te sugerimos la siguiente estructura: (acción, lugar, momento del día). Los ejemplos de abajo pueden ayudarte y darte ideas. Debes presionar el botón \'+\' cuando termines la descripción.',
-        en: 'Describe the action, tell me how the characters in the photograph interact, and where the action takes place and at what time of day. We suggest the following structure: (action, place, time of day). The examples below can help you and give you ideas. You must press the \'+\' button when you finish the description.'
+        es: '- Describe a detalle la acción/lugar/momento del día.\n- Los ejemplos son ideas, si te gustan, hay un botón de copiar en cada imagen.\n- Debes presionar el botón \'+\' cuando termines el texto y luego el botón \'Siguiente\'',
+        en: '- Describe the action/place/time of day in detail.\n- The examples are ideas; if you like them, there is a copy button on each image.\n- You must press the \'+\' button when you finish the text, and then the \'Next\' button.'
       },
       placeholder: { es: 'Describe aquí la acción...', en: 'Describe the action here...' }
     },
